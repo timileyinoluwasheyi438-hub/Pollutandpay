@@ -1,0 +1,15 @@
+{% extends "core/base.html" %}{% load static %}{% block title %}Home | Pollute and Pay{% endblock %}
+{% block content %}
+{% include "core/sections/hero.html" %}
+{% include "core/sections/about.html" %}
+{% include "core/sections/services.html" with services_n=":6" %}
+{% include "core/sections/sectors.html" %}
+{% include "core/sections/steps.html" %}
+{% include "core/sections/rates.html" %}
+{% include "core/sections/why.html" %}
+{% include "core/sections/works.html" %}
+{% include "core/sections/areas.html" %}
+{% include "core/sections/reviews.html" %}
+{% include "core/sections/cta.html" %}
+{% include "core/sections/blog.html" %}
+{% endblock %}

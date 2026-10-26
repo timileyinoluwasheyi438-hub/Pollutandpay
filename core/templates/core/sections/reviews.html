@@ -1,0 +1,8 @@
+{% load static %}<section class="sec"><div class="wrap split">
+  <div data-a="left"><span class="pill dk">What customers say</span><h2>Real reviews from local homes and businesses</h2>
+    <div class="rv">{% for who,q in REVIEWS %}<blockquote class="{% if forloop.first %}on{% endif %}"><p>“{{ q }}”</p><cite>{{ who }}</cite></blockquote>{% endfor %}</div>
+    <div class="arrows"><button class="btn" data-rv="-1" aria-label="Previous">←</button><button class="btn" data-rv="1" aria-label="Next">→</button></div></div>
+  <img class="photo" data-a="right" src="{% static 'core/img/hero-collection.webp' %}" alt="Collection crew"></div></section>
+<section class="sec tint"><div class="wrap split">
+  <div data-a="left"><span class="pill dk">FAQ</span><h2>Answers to common questions</h2><p>Quick answers about filing, levy rates and payment.</p></div>
+  <div class="faq" data-a="right">{% for q,a in FAQS %}<details><summary>{{ q }}</summary><p>{{ a }}</p></details>{% endfor %}</div></div></section>

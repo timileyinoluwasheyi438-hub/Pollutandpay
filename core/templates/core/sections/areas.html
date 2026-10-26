@@ -1,0 +1,4 @@
+<section class="sec dark"><div class="wrap split">
+  <div data-a="left"><span class="pill">Service areas</span><h2>We haul across Nasarawa State</h2><p>Our crews serve neighbourhoods, business districts and industrial sites across the state.</p>
+    <h3>Areas we serve</h3><div class="chips">{% for a in AREAS %}<span>{{ a }}</span>{% endfor %}</div><a class="btn" href="{% url 'contact' %}">Check service availability</a></div>
+  <iframe class="map" data-a="right" title="Nasarawa State map" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=7.2%2C7.8%2C9.6%2C9.3&amp;layer=mapnik"></iframe></div></section>

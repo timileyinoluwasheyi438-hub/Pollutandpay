@@ -1,0 +1,9 @@
+{% extends "core/base.html" %}{% block title %}Contact | Pollute and Pay{% endblock %}
+{% block content %}
+<section class="phead"><div class="wrap"><h1 data-a="left">Contact</h1><p data-a="left" style="--d:.1s">Tell us what you need and where you are.</p></div></section>
+<section class="sec"><div class="wrap split">
+  <div data-a="left"><h2>Ready to schedule service?</h2><p>Send a message and we will reply by email. Pollute and Pay is powered by AGold International Venture.</p><p>Nasarawa State, Nigeria</p></div>
+  <form method="post" class="cform" data-a="right">{% csrf_token %}<input name="name" placeholder="Your name" required><input name="email" type="email" placeholder="Email" required>
+    <textarea name="message" rows="5" placeholder="How can we help?" required></textarea><button class="btn">Send message</button></form></div></section>
+{% include "core/sections/areas.html" %}
+{% endblock %}

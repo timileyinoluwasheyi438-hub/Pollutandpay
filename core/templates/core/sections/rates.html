@@ -1,0 +1,4 @@
+<section class="sec tint"><div class="wrap">
+  <span class="pill dk" data-a="down">Levy rates</span><h2 data-a="down">Published rates per tonne</h2>
+  <p class="sub l" data-a="up">Indicative rates used to assess declarations. They can be revised by the operator at any time.</p>
+  <div class="grid3">{% for r in RATES_LIST %}<article class="card rate {% if forloop.first %}on{% endif %}" data-a="{% cycle 'left' 'up' 'right' %}"><h3>{{ r.name }}</h3><p>{{ r.desc }}</p><strong>₦{{ r.rate|floatformat:"2g" }}</strong><small>per tonne</small></article>{% endfor %}</div></div></section>

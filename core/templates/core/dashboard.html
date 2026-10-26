@@ -1,0 +1,25 @@
+{% extends "core/base.html" %}
+{% block title %}Dashboard | Pollute and Pay{% endblock %}
+{% block content %}
+{{ rates|json_script:"rates" }}
+<section class="sec"><div class="wrap">
+  <h1 class="dh" data-a="left">Waste declarations</h1>
+  <p data-a="left">File a declaration for each waste stream and settle the levy assessed against it.</p>
+  <div class="grid3 stats">
+    <div class="card" data-a="left"><small>Declarations filed</small><strong>{{ count }}</strong></div>
+    <div class="card" data-a="up"><small>Outstanding levy</small><strong class="g">₦{{ due|floatformat:"2g" }}</strong></div>
+    <div class="card" data-a="right"><small>Settled to date</small><strong>₦{{ paid|floatformat:"2g" }}</strong></div>
+  </div>
+  <div class="dgrid">
+    <form method="post" class="card fform" data-a="left"><h3>New declaration</h3>{% csrf_token %}{{ form.non_field_errors }}
+      {% for f in form %}<label>{{ f.label }}{{ f }}{{ f.errors }}</label>{% endfor %}
+      <div class="assess"><small>Assessed levy</small><strong id="levy">₦0.00</strong></div>
+      <button class="btn">File declaration</button></form>
+    <div data-a="right"><h2>Your filings</h2>
+      {% for d in items %}<article class="card fil"><span class="tag {{ d.status }}">{{ d.get_status_display|default:d.status|title }}</span>
+        <small>{{ d.ref }}</small><h3>{{ d.get_category_display }}</h3><p>{{ d.facility }} · {{ d.period_from|date:"d M Y" }} to {{ d.period_to|date:"d M Y" }}</p>
+        <p>{{ d.quantity }} t</p><strong>₦{{ d.levy|floatformat:"2g" }}</strong>
+        {% if d.status == "unpaid" %}<form method="post" action="{% url 'pay' d.ref %}">{% csrf_token %}<button class="btn">Pay with Paystack</button></form>{% endif %}
+      </article>{% empty %}<p>No filings yet. Fill in the form to file your first declaration.</p>{% endfor %}
+    </div></div></div></section>
+{% endblock %}

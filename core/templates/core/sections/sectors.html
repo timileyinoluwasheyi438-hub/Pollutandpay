@@ -1,0 +1,4 @@
+{% load static %}<section class="sec dark"><div class="wrap">
+  <span class="pill" data-a="down">One crew, every property</span>
+  <h2 class="c" data-a="down">Whether it is your home, business or plant, we will haul it.</h2>
+  <div class="grid3">{% for tag,t,img,pts in SECTORS %}<article class="card w" data-a="{% cycle 'left' 'up' 'right' %}"><img src="{% static img %}" alt=""><small class="tg">{{ tag }}</small><h3>{{ t }}</h3><ul>{% for p in pts %}<li>{{ p }}</li>{% endfor %}</ul><a class="al" href="{% url 'services' %}">Services</a></article>{% endfor %}</div></div></section>

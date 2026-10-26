@@ -1,0 +1,3 @@
+<section class="sec"><div class="wrap split">
+  <div data-a="left"><span class="pill dk">How it works</span><h2>From declaration to paid in 4 easy steps</h2><p>A structured process with clear pricing and a record of every filing.</p><a class="btn" href="{% url 'dashboard' %}">Get started</a></div>
+  <div class="grid2">{% for t,d in STEPS %}<div class="step" data-a="{% cycle 'up' 'right' 'left' 'down' %}"><b>{{ forloop.counter }}</b><h3>{{ t }}</h3><p>{{ d }}</p></div>{% endfor %}</div></div></section>

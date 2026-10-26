@@ -1,0 +1,4 @@
+{% load static %}<section class="sec tint"><div class="wrap split">
+  <div data-a="left"><span class="pill dk">Why choose us</span><h2>Why customers choose Pollute and Pay</h2>
+    {% for t,d in WHY %}<div class="why"><h3>{{ t }}</h3><p>{{ d }}</p></div>{% endfor %}</div>
+  <div class="stack" data-a="right"><img class="photo" src="{% static 'core/img/collection-city.webp' %}" alt=""><img class="photo" src="{% static 'core/img/collection-workers.webp' %}" alt=""></div></div></section>

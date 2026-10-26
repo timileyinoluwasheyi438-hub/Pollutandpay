@@ -1,0 +1,4 @@
+<section class="sec tint"><div class="wrap">
+  <span class="pill dk" data-a="down">What we do</span><h2 data-a="down">Services for every property type</h2>
+  <div class="grid3">{% for t,d in SERVICES|slice:services_n %}<article class="card {% if forloop.first %}on{% endif %}" data-a="{% cycle 'left' 'up' 'right' %}"><h3>{{ t }}</h3><p>{{ d }}</p></article>{% endfor %}</div>
+  {% if services_n == ":6" %}<p class="more" data-a="up"><a class="btn" href="{% url 'services' %}">See all services</a></p>{% endif %}</div></section>

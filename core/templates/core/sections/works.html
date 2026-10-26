@@ -1,0 +1,3 @@
+{% load static %}<section class="sec"><div class="wrap">
+  <span class="pill dk" data-a="down">Works done</span><h2 data-a="down">Ongoing projects</h2>
+  <div class="grid3">{% for t,img in WORKS %}<article class="card w2" data-a="{% cycle 'left' 'up' 'right' %}"><img src="{% static img %}" alt=""><span class="ns"><img src="{% static 'core/img/nasarawa-logo.png' %}" alt="Nasarawa State Government"></span><h3>{{ t }}</h3><p>Ongoing</p></article>{% endfor %}</div></div></section>
