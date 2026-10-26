@@ -28,3 +28,9 @@
 .biz:hover::before{transform:scale(1.12)}
 .biz div{position:relative;z-index:2;padding:1rem}.biz h3{margin:0 0 .2rem;font-size:1.15rem}.biz p{margin:0;font-size:.85rem;color:#e8f2e5}
 @media(max-width:900px){.pheadin{grid-template-columns:1fr}.pheadin.rev .zm{order:0}.phead .zm{height:260px}.bizgrid{grid-template-columns:repeat(2,1fr)}}
+
+
+.logo img, img.logo {
+  height: 56px;
+  width: auto;
+}

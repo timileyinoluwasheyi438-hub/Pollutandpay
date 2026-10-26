@@ -53,3 +53,9 @@ nav{display:flex;gap:1.4rem;margin:0 auto;font-weight:500}nav a:hover{color:var(
 .blog img{height:200px;width:100%;object-fit:cover;border-radius:var(--r);margin-bottom:.8rem}.blog p{color:var(--mut)}
 .nl{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;border-bottom:1px solid #fff2;padding-bottom:2rem;margin-bottom:2rem}.nl form{display:flex;gap:.5rem}.nl input{width:260px}
 @media(max-width:900px){.statrow,.cta{grid-template-columns:1fr}}
+
+
+.logo img, img.logo {
+  height: 56px;
+  width: auto;
+}
