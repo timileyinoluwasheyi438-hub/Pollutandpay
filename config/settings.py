@@ -66,3 +66,11 @@ PAYSTACK_SECRET_KEY = env("PAYSTACK_SECRET_KEY")
 RESEND_API_KEY = env("RESEND_API_KEY")
 MAIL_FROM = env("MAIL_FROM", "Pollute and Pay <onboarding@resend.dev>")
 NOTIFY_EMAIL = env("NOTIFY_EMAIL")
+
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {"console": {"class": "logging.StreamHandler"}},
+    "loggers": {"django.request": {"handlers": ["console"], "level": "ERROR"}},
+}
