@@ -1,3 +1,2 @@
-{% load static %}<section class="sec"><div class="wrap">
-  <span class="pill dk" data-a="down">Our blog</span><h2 data-a="down">Helpful tips for waste and recycling</h2>
-  <div class="grid3">{% for t,d,img in BLOG %}<article class="blog" data-a="{% cycle 'left' 'up' 'right' %}"><img src="{% static img %}" alt=""><h3>{{ t }}</h3><p>{{ d }}</p><a class="al" href="{% url 'how' %}">Read more</a></article>{% endfor %}</div></div></section>
+{% load static %}<section class="sec"><div class="wrap cta"><div data-a="left"><h2>Ready to schedule service?</h2><p>Tell us what you need and where you are located. Our team will get you started. Pollute and Pay is powered by AGold International Venture.</p><a class="btn" href="{% url 'contact' %}">Get in touch</a></div>
+  <div class="zm" data-a="right"><img src="{% static 'core/img/recycling-conveyor.webp' %}" alt=""></div></div></section>

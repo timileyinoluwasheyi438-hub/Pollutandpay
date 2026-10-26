@@ -1,0 +1,30 @@
+/* logos */
+.brand img{height:58px;width:auto}
+.agold{background:none;padding:0}.agold img{height:84px;width:auto}
+.ns{padding:5px 8px}.ns img{height:40px;width:auto}
+/* hover zoom for every image */
+.zm{display:block;overflow:hidden;border-radius:var(--r)}
+.zm img{display:block;width:100%;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.zm:hover img{transform:scale(1.09)}
+.zm .photo{border-radius:0;max-height:420px}
+.stack .zm{height:240px}.stack .zm .photo{height:100%}
+.card.w .zm{height:190px;border-radius:0}.card.w .zm img{height:100%;object-fit:cover}
+.card.w2 .zm{height:200px;border-radius:0}.card.w2 .zm img{height:100%;object-fit:cover}
+.cta .zm{height:300px}.cta .zm img{height:100%;object-fit:cover;border-radius:0}
+.blog .zm{height:200px;margin-bottom:.8rem}.blog .zm img{height:100%;object-fit:cover;border-radius:0;margin:0}
+/* page banner: green, text one side, image the other */
+.phead{background:radial-gradient(circle at 85% 20%,#1c7a3f 0,var(--forest) 55%);padding:4.5rem 0}
+.pheadin{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
+.pheadin.rev .zm{order:-1}
+.phead .zm{height:380px;box-shadow:0 24px 60px #0006}.phead .zm img{height:100%;object-fit:cover}
+.phead h1{font-size:clamp(2.4rem,5vw,4rem);margin:0 0 .3em}
+.crumb{margin:0 0 1rem;color:#9fd18a;font-size:.95rem}.crumb a:hover{text-decoration:underline}
+.phead .lead{font-size:1.2rem;color:#d7e8d2;margin:0 0 1.5rem;max-width:520px}
+/* who we serve */
+.bizgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2rem}
+.biz{position:relative;overflow:hidden;border-radius:var(--r);aspect-ratio:4/5;color:#fff;display:flex;align-items:flex-end;background:linear-gradient(160deg,var(--c),#0a1f12)}
+.biz::before{content:"";position:absolute;inset:0;background:var(--img) center/cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.biz::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,#000b 0,#0000 62%)}
+.biz:hover::before{transform:scale(1.12)}
+.biz div{position:relative;z-index:2;padding:1rem}.biz h3{margin:0 0 .2rem;font-size:1.15rem}.biz p{margin:0;font-size:.85rem;color:#e8f2e5}
+@media(max-width:900px){.pheadin{grid-template-columns:1fr}.pheadin.rev .zm{order:0}.phead .zm{height:260px}.bizgrid{grid-template-columns:repeat(2,1fr)}}

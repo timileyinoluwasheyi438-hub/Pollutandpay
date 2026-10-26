@@ -1,7 +1,8 @@
-{% extends "core/base.html" %}{% load static %}{% block title %}Sectors | Pollute and Pay{% endblock %}
+{% extends "core/base.html" %}{% block title %}Sectors | Pollute and Pay{% endblock %}
 {% block content %}
-<section class="phead"><div class="wrap"><h1 data-a="left">Sectors</h1><p data-a="left" style="--d:.1s">One crew for homes, business and industry.</p></div></section>
+{% include "core/sections/phead.html" with title="Sectors" sub="One crew for homes, business and industry." img="core/img/collection-city.webp" side="rev" %}
 {% include "core/sections/sectors.html" %}
+{% include "core/sections/clients.html" %}
 {% include "core/sections/areas.html" %}
 {% include "core/sections/cta.html" %}
 {% endblock %}

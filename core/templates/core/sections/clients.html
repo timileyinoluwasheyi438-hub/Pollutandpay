@@ -1,0 +1,4 @@
+<section class="sec"><div class="wrap">
+  <span class="pill dk" data-a="down">Who we serve</span><h2 data-a="down">Businesses we provide services for</h2>
+  <p class="sub l" data-a="up">Pollute and Pay, powered by AGold International Venture, serves every business that produces waste.</p>
+  <div class="bizgrid">{% for b in BIZ_LIST %}<article class="biz" data-a="{% cycle 'left' 'up' 'down' 'right' %}" style="--c:{{ b.color }};{% if b.img %}--img:url('{{ b.img }}');{% endif %}"><div><h3>{{ b.name }}</h3><p>{{ b.desc }}</p></div></article>{% endfor %}</div></div></section>

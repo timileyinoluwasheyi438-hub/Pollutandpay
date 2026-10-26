@@ -1,9 +1,10 @@
-{% extends "core/base.html" %}{% load static %}{% block title %}Home | Pollute and Pay{% endblock %}
+{% extends "core/base.html" %}{% block title %}Home | Pollute and Pay{% endblock %}
 {% block content %}
 {% include "core/sections/hero.html" %}
 {% include "core/sections/about.html" %}
 {% include "core/sections/services.html" with services_n=":6" %}
 {% include "core/sections/sectors.html" %}
+{% include "core/sections/clients.html" %}
 {% include "core/sections/steps.html" %}
 {% include "core/sections/rates.html" %}
 {% include "core/sections/why.html" %}

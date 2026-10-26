@@ -1,0 +1,8 @@
+{% load static %}<section class="phead"><div class="wrap pheadin {{ side }}">
+  <div data-a="{% if side %}right{% else %}left{% endif %}">
+    <p class="crumb"><a href="{% url 'home' %}">Home</a> / {{ title }}</p>
+    <h1>{{ title }}</h1><p class="lead">{{ sub }}</p>
+    <div class="btns"><a class="btn" href="{% url 'dashboard' %}">File a declaration</a><a class="btn ghost" href="{% url 'contact' %}">Contact us</a></div>
+  </div>
+  <div class="zm" data-a="{% if side %}left{% else %}right{% endif %}" style="--d:.15s"><img src="{% static img %}" alt=""></div>
+</div></section>
