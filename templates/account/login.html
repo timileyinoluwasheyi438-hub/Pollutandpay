@@ -1,0 +1,22 @@
+{% extends "core/base.html" %}
+{% load socialaccount %}
+{% block title %}Sign In | Pollute and Pay{% endblock %}
+{% block content %}
+{% include "account/_auth_style.html" %}
+<section class="auth">
+  <div class="auth-card">
+    <h1>Welcome back</h1>
+    <p class="auth-sub">Sign in to your Pollute and Pay account.</p>
+    <form method="post" action="{% url 'account_login' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      {% if redirect_field_value %}<input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">{% endif %}
+      <button type="submit" class="auth-btn">Sign In</button>
+    </form>
+    <p class="auth-links"><a href="{% url 'account_reset_password' %}">Forgot your password?</a></p>
+    <div class="auth-or"><span>or</span></div>
+    <a class="auth-google" href="{% provider_login_url 'google' %}">Continue with Google</a>
+    <p class="auth-foot">No account yet? <a href="{% url 'account_signup' %}">Sign up</a></p>
+  </div>
+</section>
+{% endblock %}
